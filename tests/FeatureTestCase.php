@@ -3,7 +3,6 @@
 namespace Rediscope\Tests;
 
 use Illuminate\Foundation\Application;
-use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Foundation\Testing\TestResponse as LegacyTestResponse;
 use Illuminate\Testing\TestResponse;
 use Rediscope\Rediscope;
@@ -12,8 +11,6 @@ use Orchestra\Testbench\TestCase;
 
 class FeatureTestCase extends TestCase
 {
-    use RefreshDatabase;
-
     protected function setUp(): void
     {
         parent::setUp();

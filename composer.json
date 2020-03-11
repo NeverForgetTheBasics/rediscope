@@ -22,5 +22,22 @@
         "psr-4": {
             "Rediscope\\": "src/"
         }
-    }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Rediscope\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Rediscope\\RediscopeServiceProvider"
+            ]
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": false
 }
