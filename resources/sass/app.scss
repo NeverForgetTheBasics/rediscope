@@ -1,0 +1,56 @@
+$font-family-base: Nunito;
+
+$font-size-base: 0.95rem;
+$badge-font-size: 0.95rem;
+
+$primary: #D82C20;
+$secondary: #DAE1E7;
+$success: #51D88A;
+$info: #BCDEFA;
+$warning: #FFF382;
+$danger: #EF5753;
+
+$body-bg: #f3eded;
+
+$btn-focus-width: 0;
+
+$sidebar-nav-color: #2a5164;
+$sidebar-icon-color: #c3cbd3;
+
+$pill-link-active: $primary;
+
+$border-color: #EFEFEF;
+$table-headers-color: #f6f3f3;
+$table-border-color: #EFEFEF;
+$table-hover-bg: #faf1f1;
+
+$header-border-color: #e9d5d5;
+
+$card-cap-bg: #fff;
+$card-bg-secondary: #faf1f1;
+$card-shadow-color: #cdd8df;
+
+$code-bg: #120F12;
+
+$paginator-button-color: #9ea7ac;
+
+$new-entries-bg: #fffee9;
+
+$control-action-icon-color: #ccd2df;
+
+$grid-breakpoints: (
+        xs: 0,
+        sm: 2px,
+        md: 8px,
+        lg: 9px,
+        xl: 10px
+) !default;
+
+$container-max-widths: (
+        sm: 1137px,
+        md: 1138px,
+        lg: 1139px,
+        xl: 1140px
+) !default;
+
+@import "base";
