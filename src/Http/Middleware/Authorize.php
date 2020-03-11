@@ -1,8 +1,8 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope\Http\Middleware;
+namespace Rediscope\Http\Middleware;
 
-use NeverForgetTheBasics\Rediscope\Rediscope;
+use Rediscope\Rediscope;
 
 class Authorize
 {

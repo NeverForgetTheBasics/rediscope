@@ -1,6 +1,6 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope\DataType;
+namespace Rediscope\DataType;
 
 class SortedSets extends DataType
 {

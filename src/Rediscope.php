@@ -1,15 +1,15 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope;
+namespace Rediscope;
 
 
-use NeverForgetTheBasics\Rediscope\DataType\DataType;
-use NeverForgetTheBasics\Rediscope\DataType\Hashes;
-use NeverForgetTheBasics\Rediscope\DataType\Lists;
-use NeverForgetTheBasics\Rediscope\DataType\Sets;
-use NeverForgetTheBasics\Rediscope\DataType\SortedSets;
-use NeverForgetTheBasics\Rediscope\DataType\Strings;
-use NeverForgetTheBasics\Rediscope\Formatter\Information;
+use Rediscope\DataType\DataType;
+use Rediscope\DataType\Hashes;
+use Rediscope\DataType\Lists;
+use Rediscope\DataType\Sets;
+use Rediscope\DataType\SortedSets;
+use Rediscope\DataType\Strings;
+use Rediscope\Formatter\Information;
 use Illuminate\Http\Request;
 use Illuminate\Redis\Connections\Connection;
 use Illuminate\Support\Collection;

@@ -1,6 +1,6 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope;
+namespace Rediscope;
 
 trait AuthorizesRequests
 {

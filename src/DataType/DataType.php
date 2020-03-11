@@ -1,6 +1,6 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope\DataType;
+namespace Rediscope\DataType;
 
 use Illuminate\Redis\Connections\Connection;
 

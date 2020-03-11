@@ -1,12 +1,12 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope\Http\Controllers;
+namespace Rediscope\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Collection;
 use Illuminate\Support\Str;
-use NeverForgetTheBasics\Rediscope\Rediscope;
+use Rediscope\Rediscope;
 
 
 class RedisManagerController extends Controller

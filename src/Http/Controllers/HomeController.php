@@ -1,9 +1,9 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope\Http\Controllers;
+namespace Rediscope\Http\Controllers;
 
 use Illuminate\Routing\Controller;
-use NeverForgetTheBasics\Rediscope\Rediscope;
+use Rediscope\Rediscope;
 
 class HomeController extends Controller
 {

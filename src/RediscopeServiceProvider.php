@@ -1,6 +1,6 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope;
+namespace Rediscope;
 
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\ServiceProvider;
@@ -55,7 +55,7 @@ class RediscopeServiceProvider extends ServiceProvider
     private function routeConfiguration()
     {
         return [
-            'namespace' => 'NeverForgetTheBasics\Rediscope\Http\Controllers',
+            'namespace' => 'Rediscope\Http\Controllers',
             'prefix' => config('rediscope.path'),
             //'middleware' => config('rediscope.middleware'),
         ];

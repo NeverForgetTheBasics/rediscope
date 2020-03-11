@@ -1,5 +1,5 @@
 {
-    "name": "NeverForgetTheBasics/Rediscope",
+    "name": "tushar-arote/rediscope",
     "description": "An Laravel Telescope like UI for Z-Song RedisManager",
     "authors": [
         {
@@ -7,10 +7,20 @@
             "email": "tushararote123@gmail.com"
         }
     ],
-    "require": {},
+    "require": {
+        "php": "^7.2",
+        "ext-json": "*",
+        "laravel/framework": "^6.0|^7.0",
+        "moontoast/math": "^1.1",
+        "symfony/var-dumper": "^4.4|^5.0"
+    },
+    "require-dev": {
+        "ext-gd": "*",
+        "orchestra/testbench": "^4.0|^5.0"
+    },
     "autoload": {
         "psr-4": {
-            "NeverForgetTheBasics\\Rediscope\\": "src/"
+            "Rediscope\\": "src/"
         }
     }
 }

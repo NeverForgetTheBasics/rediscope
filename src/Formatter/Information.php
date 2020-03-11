@@ -1,6 +1,6 @@
 <?php
 
-namespace NeverForgetTheBasics\Rediscope\Formatter;
+namespace Rediscope\Formatter;
 
 class Information
 {
