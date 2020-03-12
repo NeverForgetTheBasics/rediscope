@@ -1797,7 +1797,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loadEntries: function loadEntries(after) {
             var _this4 = this;
 
-            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get(Rediscope.path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") + '&pattern=' + this.key || "default").then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/' + Rediscope.path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") + '&pattern=' + this.key || "default").then(function (response) {
 
                 _this4.recordingStatus = response.data.status;
 
@@ -1851,7 +1851,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
             var _this = this;
             this.alertConfirm('Are you sure you want to delete selected keys?', function () {
-                __WEBPACK_IMPORTED_MODULE_2_axios___default.a.delete(Rediscope.path + '/api/key?conn=' + localStorage.getItem("conn") + _this6.deleteParams).then(function (response) {
+                __WEBPACK_IMPORTED_MODULE_2_axios___default.a.delete('/' + Rediscope.path + '/api/key?conn=' + localStorage.getItem("conn") + _this6.deleteParams).then(function (response) {
                     _this6.alertSuccess('Success : Keys Deleted!!');
                     _this.initiateRedis();
                     _this.keys = [];
@@ -1861,7 +1861,6 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             });
         }
     }
-
 });
 
 /***/ }),
@@ -1940,7 +1939,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loadEntry: function loadEntry(after) {
             var _this3 = this;
 
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(Rediscope.path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") || "default").then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/' + Rediscope.path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") || "default").then(function (response) {
                 if (__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.isFunction(after)) {
                     after(response);
                 }
@@ -2012,7 +2011,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             this.alertConfirm('Are you sure you want to delete this key?', function () {
-                __WEBPACK_IMPORTED_MODULE_1_axios___default.a.delete(Rediscope.path + '/api/' + _this.resource + '?keys[]=' + _this.id).then(function (response) {
+                __WEBPACK_IMPORTED_MODULE_1_axios___default.a.delete('/' + Rediscope.path + '/api/' + _this.resource + '?keys[]=' + _this.id).then(function (response) {
                     _this.alertSuccess('Success : Key Deleted!!');
                     _this.$router.push({ path: "/" });
                 }).catch(function (error) {
@@ -2038,7 +2037,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loadEntry: function loadEntry(after) {
             var _this3 = this;
 
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(Rediscope.path + '/api/' + this.resource + '?key=' + this.id).then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/' + Rediscope.path + '/api/' + this.resource + '?key=' + this.id).then(function (response) {
                 if (__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.isFunction(after)) {
                     after(response);
                 }
@@ -2119,7 +2118,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var r = confirm("Are you sure you want to delete this record?");
             if (r == true) {
                 var _this = this;
-                axios.delete('/redis-manager/api/keys?keys[]=' + item.key).then(function (response) {
+                axios.delete('/' + Rediscope.path + '/api/keys?keys[]=' + item.key).then(function (response) {
                     _this.getVueItems();
                     _this.hasError = true, _this.hasDeleted = false;
                 });
