@@ -61,7 +61,7 @@
 
 
             loadEntry(after) {
-                axios.get('/' + Rediscope.ajax_path + '/api/' + this.resource +
+                axios.get('/' + Rediscope.path + '/api/' + this.resource +
                         '?conn=' + localStorage.getItem("conn") || "default"
                 ).then(response => {
                     if (_.isFunction(after)) {

@@ -25,7 +25,7 @@ moment.tz.setDefault(Rediscope.timezone);
 const router = new VueRouter({
     routes: Routes,
     mode: 'history',
-    base: '/' + window.Rediscope.ajax_path + '/',
+    base: Rediscope.path,
 });
 
 Vue.component('alert', require('./components/Alert.vue').default);
@@ -59,7 +59,7 @@ new Vue({
     mounted() {
         this.setDefaultConnection();
 
-        axios.get('/' + Rediscope.ajax_path + '/api/connections'
+        axios.get('/' + Rediscope.path + '/api/connections'
         ).then(response => {
             this.connections = response.data;
         });

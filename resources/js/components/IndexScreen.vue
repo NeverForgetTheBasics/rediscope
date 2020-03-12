@@ -36,7 +36,7 @@
          */
         mounted() {
             document.title = this.title + " - Redis Manager";
-            
+
             this.initiateRedis();
         },
 
@@ -83,7 +83,7 @@
             },
 
             loadEntries(after) {
-                axios.get('/' + Rediscope.ajax_path + '/api/' + this.resource +
+                axios.get('/' + Rediscope.path + '/api/' + this.resource +
                     '?conn=' + localStorage.getItem("conn")+'&pattern='+this.key || "default"
                 ).then(response => {
 
@@ -134,7 +134,7 @@
                 }
                 var _this = this;
                 this.alertConfirm('Are you sure you want to delete selected keys?', ()=> {
-                    axios.delete('/' + Rediscope.ajax_path + '/api/key?conn='+ localStorage.getItem("conn") + this.deleteParams).then(response => {
+                    axios.delete('/' + Rediscope.path + '/api/key?conn='+ localStorage.getItem("conn") + this.deleteParams).then(response => {
                         this.alertSuccess('Success : Keys Deleted!!');
                         _this.initiateRedis();
                         _this.keys = [];
@@ -144,7 +144,6 @@
                 });
             }
         },
-        
     }
 </script>
 

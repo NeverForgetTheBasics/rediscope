@@ -38,9 +38,9 @@
                 var r = confirm("Are you sure you want to delete this record?");
                 if (r == true) {
                   var _this = this;
-                  axios.delete('/redis-manager/api/keys?keys[]=' + item.key).then(function (response) {
+                  axios.delete('/' + Rediscope.path + '/api/keys?keys[]=' + item.key).then(function (response) {
                   _this.getVueItems();
-                  _this.hasError = true, 
+                  _this.hasError = true,
                   _this.hasDeleted = false
 
                   });

@@ -355,7 +355,6 @@ LUA;
     {
         return [
             'path' => config('rediscope.path'),
-            'ajax_path' => config('rediscope.ajax_path'),
             'timezone' => config('app.timezone'),
         ];
     }

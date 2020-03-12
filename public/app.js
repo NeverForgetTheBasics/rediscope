@@ -1797,7 +1797,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loadEntries: function loadEntries(after) {
             var _this4 = this;
 
-            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/' + Rediscope.ajax_path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") + '&pattern=' + this.key || "default").then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get(Rediscope.path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") + '&pattern=' + this.key || "default").then(function (response) {
 
                 _this4.recordingStatus = response.data.status;
 
@@ -1851,7 +1851,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             }
             var _this = this;
             this.alertConfirm('Are you sure you want to delete selected keys?', function () {
-                __WEBPACK_IMPORTED_MODULE_2_axios___default.a.delete('/' + Rediscope.ajax_path + '/api/key?conn=' + localStorage.getItem("conn") + _this6.deleteParams).then(function (response) {
+                __WEBPACK_IMPORTED_MODULE_2_axios___default.a.delete(Rediscope.path + '/api/key?conn=' + localStorage.getItem("conn") + _this6.deleteParams).then(function (response) {
                     _this6.alertSuccess('Success : Keys Deleted!!');
                     _this.initiateRedis();
                     _this.keys = [];
@@ -1940,7 +1940,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loadEntry: function loadEntry(after) {
             var _this3 = this;
 
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/' + Rediscope.ajax_path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") || "default").then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(Rediscope.path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") || "default").then(function (response) {
                 if (__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.isFunction(after)) {
                     after(response);
                 }
@@ -2012,7 +2012,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             var _this = this;
 
             this.alertConfirm('Are you sure you want to delete this key?', function () {
-                __WEBPACK_IMPORTED_MODULE_1_axios___default.a.delete('/' + Rediscope.ajax_path + '/api/' + _this.resource + '?keys[]=' + _this.id).then(function (response) {
+                __WEBPACK_IMPORTED_MODULE_1_axios___default.a.delete(Rediscope.path + '/api/' + _this.resource + '?keys[]=' + _this.id).then(function (response) {
                     _this.alertSuccess('Success : Key Deleted!!');
                     _this.$router.push({ path: "/" });
                 }).catch(function (error) {
@@ -2038,7 +2038,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loadEntry: function loadEntry(after) {
             var _this3 = this;
 
-            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get('/' + Rediscope.ajax_path + '/api/' + this.resource + '?key=' + this.id).then(function (response) {
+            __WEBPACK_IMPORTED_MODULE_1_axios___default.a.get(Rediscope.path + '/api/' + this.resource + '?key=' + this.id).then(function (response) {
                 if (__WEBPACK_IMPORTED_MODULE_0_lodash___default.a.isFunction(after)) {
                     after(response);
                 }
@@ -57806,7 +57806,7 @@ __WEBPACK_IMPORTED_MODULE_6_moment_timezone___default.a.tz.setDefault(Rediscope.
 var router = new __WEBPACK_IMPORTED_MODULE_4_vue_router__["a" /* default */]({
     routes: __WEBPACK_IMPORTED_MODULE_3__routes__["a" /* default */],
     mode: 'history',
-    base: '/' + window.Rediscope.ajax_path + '/'
+    base: Rediscope.path
 });
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('alert', __webpack_require__("./resources/js/components/Alert.vue").default);
@@ -57841,7 +57841,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
 
         this.setDefaultConnection();
 
-        __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/' + Rediscope.ajax_path + '/api/connections').then(function (response) {
+        __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/' + Rediscope.path + '/api/connections').then(function (response) {
             _this.connections = response.data;
         });
     },

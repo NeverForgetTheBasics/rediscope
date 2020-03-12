@@ -52,7 +52,7 @@
         methods: {
             del() {
                 this.alertConfirm('Are you sure you want to delete this key?', ()=> {
-                    axios.delete('/' + Rediscope.ajax_path + '/api/' + this.resource +
+                    axios.delete('/' + Rediscope.path + '/api/' + this.resource +
                         '?keys[]=' + this.id
                     ).then(response => {
                         this.alertSuccess('Success : Key Deleted!!');
@@ -79,7 +79,7 @@
 
 
             loadEntry(after) {
-                axios.get('/' + Rediscope.ajax_path + '/api/' + this.resource +
+                axios.get('/' + Rediscope.path + '/api/' + this.resource +
                     '?key=' + this.id
                 ).then(response => {
                     if (_.isFunction(after)) {
