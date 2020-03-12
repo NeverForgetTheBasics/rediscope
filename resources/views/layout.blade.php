@@ -5,13 +5,13 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <link rel="shortcut icon" href="{{ asset('/public/vendor/rediscope/favicon.ico') }}">
+    <link rel="shortcut icon" href="{{ asset('vendor/rediscope/favicon.ico') }}">
 
     <title>Rediscope</title>
 
     <!-- Style sheets-->
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="{{ asset('public/vendor/rediscope/'.$cssFile) }}" rel="stylesheet" type="text/css">
+    <link href="{{ asset('vendor/rediscope/'.$cssFile) }}" rel="stylesheet" type="text/css">
 </head>
 <body>
 <div id="rediscope" v-cloak>
@@ -68,6 +68,6 @@
 <script>
     window.Rediscope = @json($rediscopeScriptVariables);
 </script>
-<script src="{{asset('public/vendor/rediscope/app.js')}}"></script>
+<script src="{{asset('vendor/rediscope/app.js')}}"></script>
 </body>
 </html>
