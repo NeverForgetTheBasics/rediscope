@@ -23,15 +23,15 @@ window.Bus = new Vue({ name: 'Bus' });
 moment.tz.setDefault(Rediscope.timezone);
 
 const router = new VueRouter({
-    routes: Routes,
     mode: 'history',
-    base: Rediscope.path,
+    routes: Routes,
+    base: window.Rediscope.path,
 });
 
-Vue.component('alert', require('./components/Alert.vue').default);
-Vue.component('index-screen', require('./components/IndexScreen.vue').default);
-Vue.component('preview-screen', require('./components/PreviewScreen.vue').default);
-Vue.component('information-screen', require('./components/InformationScreen.vue').default);
+Vue.component('alert', require('./components/Alert.vue'));
+Vue.component('index-screen', require('./components/IndexScreen.vue'));
+Vue.component('preview-screen', require('./components/PreviewScreen.vue'));
+Vue.component('information-screen', require('./components/InformationScreen.vue'));
 Vue.component('vue-json-pretty', VueJsonPretty);
 
 Vue.mixin(Base);
@@ -57,6 +57,7 @@ new Vue({
     },
 
     mounted() {
+        console.log('in app mounted');
         this.setDefaultConnection();
 
         axios.get('/' + Rediscope.path + '/api/connections'

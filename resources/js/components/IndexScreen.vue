@@ -35,6 +35,7 @@
          * Prepare the component.
          */
         mounted() {
+            console.log('in parent mounted');
             document.title = this.title + " - Redis Manager";
 
             this.initiateRedis();
@@ -83,6 +84,7 @@
             },
 
             loadEntries(after) {
+                console.log('in LoadEntries');
                 axios.get('/' + Rediscope.path + '/api/' + this.resource +
                     '?conn=' + localStorage.getItem("conn")+'&pattern='+this.key || "default"
                 ).then(response => {

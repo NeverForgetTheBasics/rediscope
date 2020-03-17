@@ -16,6 +16,10 @@
             }
         },
 
+        mounted(){
+            console.log('in page mounted');
+        },
+
         methods: {
             checkAll: function(){
                 console.log(this.hiddenkeys)
@@ -46,7 +50,7 @@
                   });
                 }
             }
-          }
+        }
     }
 </script>
 

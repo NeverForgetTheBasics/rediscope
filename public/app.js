@@ -1743,6 +1743,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
      * Prepare the component.
      */
     mounted: function mounted() {
+        console.log('in parent mounted');
         document.title = this.title + " - Redis Manager";
 
         this.initiateRedis();
@@ -1797,6 +1798,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         loadEntries: function loadEntries(after) {
             var _this4 = this;
 
+            console.log('in LoadEntries');
             __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/' + Rediscope.path + '/api/' + this.resource + '?conn=' + localStorage.getItem("conn") + '&pattern=' + this.key || "default").then(function (response) {
 
                 _this4.recordingStatus = response.data.status;
@@ -2092,6 +2094,9 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
             keys: [],
             hiddenkeys: ''
         };
+    },
+    mounted: function mounted() {
+        console.log('in page mounted');
     },
 
 
@@ -57803,15 +57808,15 @@ window.Bus = new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({ name: 'Bus' });
 __WEBPACK_IMPORTED_MODULE_6_moment_timezone___default.a.tz.setDefault(Rediscope.timezone);
 
 var router = new __WEBPACK_IMPORTED_MODULE_4_vue_router__["a" /* default */]({
-    routes: __WEBPACK_IMPORTED_MODULE_3__routes__["a" /* default */],
     mode: 'history',
-    base: Rediscope.path
+    routes: __WEBPACK_IMPORTED_MODULE_3__routes__["a" /* default */],
+    base: window.Rediscope.path
 });
 
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('alert', __webpack_require__("./resources/js/components/Alert.vue").default);
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('index-screen', __webpack_require__("./resources/js/components/IndexScreen.vue").default);
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('preview-screen', __webpack_require__("./resources/js/components/PreviewScreen.vue").default);
-__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('information-screen', __webpack_require__("./resources/js/components/InformationScreen.vue").default);
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('alert', __webpack_require__("./resources/js/components/Alert.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('index-screen', __webpack_require__("./resources/js/components/IndexScreen.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('preview-screen', __webpack_require__("./resources/js/components/PreviewScreen.vue"));
+__WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('information-screen', __webpack_require__("./resources/js/components/InformationScreen.vue"));
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.component('vue-json-pretty', __WEBPACK_IMPORTED_MODULE_5_vue_json_pretty___default.a);
 
 __WEBPACK_IMPORTED_MODULE_0_vue___default.a.mixin(__WEBPACK_IMPORTED_MODULE_1__base__["a" /* default */]);
@@ -57838,6 +57843,7 @@ new __WEBPACK_IMPORTED_MODULE_0_vue___default.a({
     mounted: function mounted() {
         var _this = this;
 
+        console.log('in app mounted');
         this.setDefaultConnection();
 
         __WEBPACK_IMPORTED_MODULE_2_axios___default.a.get('/' + Rediscope.path + '/api/connections').then(function (response) {
@@ -58218,15 +58224,15 @@ module.exports = Component.exports
 }, {
     path: '/keys/:key',
     name: 'keys-preview',
-    component: __webpack_require__("./resources/js/screens/keys/preview.vue").default
+    component: __webpack_require__("./resources/js/screens/keys/preview.vue")
 }, {
     path: '/keys',
     name: 'Keys',
-    component: __webpack_require__("./resources/js/screens/keys/index.vue").default
+    component: __webpack_require__("./resources/js/screens/keys/index.vue")
 }, {
     path: '/information',
     name: 'Information',
-    component: __webpack_require__("./resources/js/screens/info/index.vue").default
+    component: __webpack_require__("./resources/js/screens/info/index.vue")
 }]);
 
 /***/ }),
