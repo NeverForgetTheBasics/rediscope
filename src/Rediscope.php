@@ -183,6 +183,7 @@ class Rediscope
                 break;
             }
         }
+        //$keys = iterator_to_array(new Keyspace($client->client(), $pattern));
 
         $script = <<<'LUA'
             local type = redis.call('type', KEYS[1])
