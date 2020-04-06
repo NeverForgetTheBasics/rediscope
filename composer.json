@@ -1,6 +1,7 @@
 {
     "name": "tushar-arote/rediscope",
     "description": "An Laravel Telescope like UI for Z-Song RedisManager",
+    "license": "MIT",
     "authors": [
         {
             "name": "Tushar Arote",
