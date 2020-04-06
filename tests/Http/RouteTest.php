@@ -24,7 +24,7 @@ class RouteTest extends FeatureTestCase
     public function rediscopeIndexRoutesProvider()
     {
         return [
-            'Redis' => ['/rediscope/api/scan'],
+            'Connections' => ['/rediscope/api/connections'],
         ];
     }
 
@@ -33,9 +33,9 @@ class RouteTest extends FeatureTestCase
      */
     public function test_route($endpoint)
     {
-        $this->post($endpoint)
-            ->assertSuccessful()
-            ->assertJsonStructure(['entries' => []]);
+        $this->get($endpoint)
+            ->assertStatus(200)
+            ->assertSuccessful();
     }
 
     private function registerAssertJsonExactFragmentMacro()

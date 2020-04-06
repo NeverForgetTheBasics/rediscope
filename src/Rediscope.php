@@ -57,6 +57,7 @@ class Rediscope
      */
     public function __construct($connection = 'default')
     {
+        \Log::info($connection);
         $this->connection = $connection;
     }
 
